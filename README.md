@@ -138,6 +138,7 @@ CREATE TABLE feature_values (
   data_source VARCHAR(10), -- 'train' or 'api'
   version TIMESTAMP -- Timestamp-based versioning
 );
+
 ## 8. DVC for Versioning
 
 - DVC is used to track raw data, processed data, features, and trained model files.
