@@ -122,7 +122,7 @@ The pipeline workflow consists of the following stages:
 #### Table Schema
 
 ```sql
-CREATE TABLE feature_values (
+_CREATE TABLE feature_values (
   id SERIAL PRIMARY KEY,
   CreditScore FLOAT,
   Age FLOAT,
@@ -137,7 +137,7 @@ CREATE TABLE feature_values (
   Exited INT, -- Nullable for API data
   data_source VARCHAR(10), -- 'train' or 'api'
   version TIMESTAMP -- Timestamp-based versioning
-);
+)_
 
 ## 8. DVC for Versioning
 
