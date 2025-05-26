@@ -121,8 +121,7 @@ The pipeline workflow consists of the following stages:
 
 #### Table Schema
 
-```sql
-_CREATE TABLE feature_values (
+CREATE TABLE feature_values (
   id SERIAL PRIMARY KEY,
   CreditScore FLOAT,
   Age FLOAT,
@@ -137,7 +136,9 @@ _CREATE TABLE feature_values (
   Exited INT, -- Nullable for API data
   data_source VARCHAR(10), -- 'train' or 'api'
   version TIMESTAMP -- Timestamp-based versioning
-)_
+)
+
+---
 
 ## 8. DVC for Versioning
 
@@ -145,6 +146,8 @@ _CREATE TABLE feature_values (
 - Remote storage is configured using AWS S3 to store versioned artifacts.
 - Enables reproducibility by allowing restoration of any previous version of data or models.
 - Integrates seamlessly with Git for full pipeline version control.
+
+---
 
 ## 9. Model Building
 
@@ -154,6 +157,8 @@ _CREATE TABLE feature_values (
 - Performance metrics (accuracy, precision, recall, F1 score) were computed.
 - The best-performing model was saved for downstream inference.
 
+---
+
 ## 10. Orchestration & Automation
 
 - Apache Airflow was used to automate the entire pipeline.
@@ -161,11 +166,15 @@ _CREATE TABLE feature_values (
 - Tasks are modular and scheduled for periodic execution.
 - Retry mechanisms and logs are included for failure handling and monitoring.
 
+---
+
 ## 11. Conclusion
 
 - The project successfully implemented a full ML pipeline for bank churn prediction.
 - Ensured automation, reproducibility, and version control throughout the pipeline.
 - Integrated tools like DVC, PostgreSQL, Airflow, and S3 for robust data handling.
+
+---
 
 ### Key Takeaways
 
